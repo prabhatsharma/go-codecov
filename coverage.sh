@@ -7,8 +7,10 @@ go test ./... -race -covermode=atomic -coverprofile=coverage.out
 # or 
 # bash <(curl -s https://codecov.io/bash) 
 
-# enable threshold
 
+# Example setup https://github.com/lluuiissoo/go-testcoverage/blob/main/.github/workflows/ci.yml
+
+# enable threshold
 COVERAGE_THRESHOLD=80
 
 totalCoverage=`go tool cover -func=coverage.out | grep total | grep -Eo '[0-9]+\.[0-9]'`
